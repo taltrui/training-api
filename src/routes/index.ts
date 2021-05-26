@@ -24,18 +24,18 @@ authRouter.post("/create", create);
 authRouter.get("/logout", checkIfAuth, logout);
 
 const calcRouter = Router();
-calcRouter.get("/exp/:id", getExpression);
-calcRouter.put("/exp/:id", updateExpression);
-calcRouter.delete("/exp", deleteExpressions);
-calcRouter.get("/exp", getAllExpressions);
-calcRouter.post("/exp", createExpressions);
+calcRouter.get("/expressions/:id", getExpression);
+calcRouter.put("/expressions/:id", updateExpression);
+calcRouter.delete("/expressions", deleteExpressions);
+calcRouter.get("/expressions", getAllExpressions);
+calcRouter.post("/expressions", createExpressions);
 
 const notesRouter = Router();
-notesRouter.get("/task/:id", getTask);
-notesRouter.put("/task/:id", updateTask);
-notesRouter.delete("/task", deleteTask);
-notesRouter.get("/task", getAllTasks);
-notesRouter.post("/task", createTasks);
+notesRouter.get("/tasks/:id", getTask);
+notesRouter.put("/tasks/:id", updateTask);
+notesRouter.delete("/tasks", deleteTask);
+notesRouter.get("/tasks", getAllTasks);
+notesRouter.post("/tasks", createTasks);
 
 const baseRouter = Router();
 baseRouter.use("/auth", authRouter);
