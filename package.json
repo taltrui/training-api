@@ -8,7 +8,7 @@
     "clean": "rimraf dist",
     "start": "yarn prod",
     "start:dev": "nodemon",
-    "server:prod": "node -r module-alias/register ./dist/src --env=production"
+    "server:prod": "node -r module-alias/register ./dist --env=production"
   },
   "nodemonConfig": {
     "watch": [
