@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { admin, auth } from "@firebase";
+import { admin, auth } from "../config/firebase";
 
 interface LoginBody {
   email?: string;

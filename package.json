@@ -2,10 +2,13 @@
   "name": "node-api-rest-bootstrap",
   "version": "0.0.0",
   "scripts": {
-    "build": "./node_modules/.bin/ts-node build.ts",
+    "build": "tsc",
+    "prod": "npm-run-all clean build server:prod",
     "lint": "eslint . --ext .ts",
-    "start": "node -r module-alias/register ./dist --env=production",
-    "start:dev": "nodemon"
+    "clean": "rimraf dist",
+    "start": "yarn prod",
+    "start:dev": "nodemon",
+    "server:prod": "node -r module-alias/register ./dist/src --env=production"
   },
   "nodemonConfig": {
     "watch": [
@@ -54,6 +57,7 @@
     "firebase-admin": "^9.8.0",
     "helmet": "^4.6.0",
     "jsonfile": "^6.1.0",
+    "module-alias": "^2.2.2",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6",
     "types": "^0.1.1"
@@ -83,6 +87,8 @@
     "fs-extra": "^10.0.0",
     "jasmine": "^3.7.0",
     "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.3",
     "supertest": "^6.1.3",
     "ts-node": "^10.0.0",
     "tsconfig-paths": "^3.9.0",

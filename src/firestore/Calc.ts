@@ -1,5 +1,5 @@
-import { CALC_COLLECTION } from "@constants/firebase";
-import { db } from "@firebase";
+import { CALC_COLLECTION } from "../constants/firebase";
+import { db } from "../config/firebase";
 
 export const getExpById = (id: string): Promise<unknown> =>
   db

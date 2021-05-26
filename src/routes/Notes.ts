@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Request, Response } from "express";
-import { admin, auth } from "@firebase";
 
 interface LoginBody {
   email?: string;

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { Router } from "express";
-import { checkIfAuth } from "src/middlewares/auth";
+import { checkIfAuth } from "../middlewares/auth";
 import { create, login, logout } from "./Auth";
 import {
   createExpressions,

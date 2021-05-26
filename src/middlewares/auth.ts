@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 
-import { admin } from "@firebase";
+import { admin } from "../config/firebase";
 
 export const checkIfAuth = async (
   req: Request,

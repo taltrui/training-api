@@ -1,13 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-empty-function */
 import {
   createExp,
   deleteExpById,
   getAllExpsByUid,
   getExpById,
   updateExpById,
-} from "@firestore/Calc";
+} from "../firestore/Calc";
 import { Request, Response } from "express";
 
 interface Expression {

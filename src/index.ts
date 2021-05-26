@@ -1,4 +1,4 @@
-import app from "@server";
+import app from "./server";
 
 // Start the server
 const port = Number(process.env.PORT || 3000);
