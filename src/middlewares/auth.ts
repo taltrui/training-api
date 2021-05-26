@@ -7,7 +7,6 @@ export const checkIfAuth = async (
   res: Response,
   next: NextFunction
 ) => {
-  if (req.path === "/auth/login" || req.path === "/auth/create") return next();
   const token = req.headers.authorization?.replace("Bearer ", "") || "";
 
   try {
